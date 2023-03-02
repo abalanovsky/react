@@ -1,0 +1,42 @@
+.info-section {
+    width: 80%;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.city-block {
+    width: 700px;
+    height: 400px;
+    background: linear-gradient(0deg, rgba(28, 28, 82, 0.9), rgba(28, 28, 82, 0.9)), url('../../assets/sky.jpg');
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.container-additional-info {
+    display: flex;
+}
+.additional-block-style {
+    width: 150px;
+    height: 80px;
+    background-color: rgba(36, 36, 107, 0.33);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+.heading-add-block {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.flex-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

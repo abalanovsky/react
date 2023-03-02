@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
+import {SelectCity} from "./components/SelectCity/SelectCity";
+import {WeatherInfo} from "./components/WeatherInfo/WeatherInfo";
+
+const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"]
 
 function App() {
+    const [city, setCity] = useState(null)
+    const date = new Date()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="header">
+            <h1 className="header-title">WEATHER FORECAST</h1>
+            <h2 className="header-info">{date.getDate()} {monthNames[date.getMonth()]}</h2>
+        </div>
+        <div className="container">
+      <WeatherInfo city={city}/>
+      <SelectCity handleSelect={setCity} />
+        </div>
+
     </div>
   );
 }
